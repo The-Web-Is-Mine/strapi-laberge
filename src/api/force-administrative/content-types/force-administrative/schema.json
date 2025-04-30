@@ -1,0 +1,54 @@
+{
+  "kind": "collectionType",
+  "collectionName": "force_administratives",
+  "info": {
+    "singularName": "force-administrative",
+    "pluralName": "force-administratives",
+    "displayName": "Force Administrative"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "Nom": {
+      "type": "string",
+      "required": true
+    },
+    "Description": {
+      "type": "text",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "required": true
+    },
+    "Email": {
+      "type": "string",
+      "required": true
+    },
+    "Telephone": {
+      "type": "string"
+    },
+    "Image": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false,
+      "required": true
+    },
+    "Facebook": {
+      "type": "string",
+      "required": false
+    },
+    "Twitter": {
+      "type": "string"
+    }
+  }
+}

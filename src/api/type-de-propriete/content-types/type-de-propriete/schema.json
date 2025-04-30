@@ -1,0 +1,39 @@
+{
+  "kind": "collectionType",
+  "collectionName": "type_de_proprietes",
+  "info": {
+    "singularName": "type-de-propriete",
+    "pluralName": "type-de-proprietes",
+    "displayName": "Type de propriété"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "Type_de_propriete": {
+      "displayName": "Type de propriété",
+      "type": "component",
+      "repeatable": true,
+      "component": "type-de-propriete.type-de-propriete",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "Nom": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "required": true
+    }
+  }
+}

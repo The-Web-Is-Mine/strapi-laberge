@@ -369,9 +369,111 @@ export interface AdminUser extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiCourtierCourtier extends Struct.CollectionTypeSchema {
+  collectionName: 'courtiers';
+  info: {
+    description: '';
+    displayName: 'Courtier';
+    pluralName: 'courtiers';
+    singularName: 'courtier';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
+  };
+  attributes: {
+    Cellulaire: Schema.Attribute.String;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    Description: Schema.Attribute.Text &
+      Schema.Attribute.Required &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    Email: Schema.Attribute.String & Schema.Attribute.Required;
+    locale: Schema.Attribute.String;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::courtier.courtier'
+    >;
+    Nom: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: false;
+        };
+      }>;
+    publishedAt: Schema.Attribute.DateTime;
+    Role: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    Telephone: Schema.Attribute.String;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiForceAdministrativeForceAdministrative
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'force_administratives';
+  info: {
+    displayName: 'Force Administrative';
+    pluralName: 'force-administratives';
+    singularName: 'force-administrative';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    Description: Schema.Attribute.Text &
+      Schema.Attribute.Required &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    Email: Schema.Attribute.String & Schema.Attribute.Required;
+    Facebook: Schema.Attribute.String;
+    Image: Schema.Attribute.Media<'images'> & Schema.Attribute.Required;
+    locale: Schema.Attribute.String;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::force-administrative.force-administrative'
+    >;
+    Nom: Schema.Attribute.String & Schema.Attribute.Required;
+    publishedAt: Schema.Attribute.DateTime;
+    Telephone: Schema.Attribute.String;
+    Twitter: Schema.Attribute.String;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiProprietePropriete extends Struct.CollectionTypeSchema {
   collectionName: 'proprietes';
   info: {
+    description: '';
     displayName: 'Propri\u00E9t\u00E9';
     pluralName: 'proprietes';
     singularName: 'propriete';
@@ -462,6 +564,82 @@ export interface ApiProprietePropriete extends Struct.CollectionTypeSchema {
           localized: true;
         };
       }>;
+    Type: Schema.Attribute.Enumeration<
+      ['\u00C0 vendre', '\u00C0 louer', 'Commerciales']
+    >;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiTypeDeProprieteTypeDePropriete
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'type_de_proprietes';
+  info: {
+    displayName: 'Type de propri\u00E9t\u00E9';
+    pluralName: 'type-de-proprietes';
+    singularName: 'type-de-propriete';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::type-de-propriete.type-de-propriete'
+    >;
+    Nom: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    publishedAt: Schema.Attribute.DateTime;
+    Type_de_propriete: Schema.Attribute.Component<
+      'type-de-propriete.type-de-propriete',
+      true
+    > &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiVilleVille extends Struct.CollectionTypeSchema {
+  collectionName: 'villes';
+  info: {
+    displayName: 'Ville';
+    pluralName: 'villes';
+    singularName: 'ville';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<'oneToMany', 'api::ville.ville'> &
+      Schema.Attribute.Private;
+    Nom: Schema.Attribute.String & Schema.Attribute.Required;
+    publishedAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -977,7 +1155,11 @@ declare module '@strapi/strapi' {
       'admin::transfer-token': AdminTransferToken;
       'admin::transfer-token-permission': AdminTransferTokenPermission;
       'admin::user': AdminUser;
+      'api::courtier.courtier': ApiCourtierCourtier;
+      'api::force-administrative.force-administrative': ApiForceAdministrativeForceAdministrative;
       'api::propriete.propriete': ApiProprietePropriete;
+      'api::type-de-propriete.type-de-propriete': ApiTypeDeProprieteTypeDePropriete;
+      'api::ville.ville': ApiVilleVille;
       'plugin::content-releases.release': PluginContentReleasesRelease;
       'plugin::content-releases.release-action': PluginContentReleasesReleaseAction;
       'plugin::i18n.locale': PluginI18NLocale;

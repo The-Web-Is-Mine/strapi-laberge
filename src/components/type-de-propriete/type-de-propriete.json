@@ -1,0 +1,14 @@
+{
+  "collectionName": "components_type_de_propriete_type_de_propriete",
+  "info": {
+    "displayName": "Type de propriété",
+    "icon": "hashtag"
+  },
+  "options": {},
+  "attributes": {
+    "Nom": {
+      "type": "string",
+      "unique": true
+    }
+  }
+}

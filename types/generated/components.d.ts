@@ -115,6 +115,17 @@ export interface ProximiteProximite extends Struct.ComponentSchema {
   };
 }
 
+export interface TypeDeProprieteTypeDePropriete extends Struct.ComponentSchema {
+  collectionName: 'components_type_de_propriete_type_de_propriete';
+  info: {
+    displayName: 'Type de propri\u00E9t\u00E9';
+    icon: 'hashtag';
+  };
+  attributes: {
+    Nom: Schema.Attribute.String & Schema.Attribute.Unique;
+  };
+}
+
 declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
@@ -125,6 +136,7 @@ declare module '@strapi/strapi' {
       'piece.piece': PiecePiece;
       'pieces-et-particularites-exterieures.pieces-et-particularites-exterieures': PiecesEtParticularitesExterieuresPiecesEtParticularitesExterieures;
       'proximite.proximite': ProximiteProximite;
+      'type-de-propriete.type-de-propriete': TypeDeProprieteTypeDePropriete;
     }
   }
 }
