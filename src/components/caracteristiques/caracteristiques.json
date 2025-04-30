@@ -1,0 +1,52 @@
+{
+  "collectionName": "components_caracteristiques_caracteristiques",
+  "info": {
+    "displayName": "Caracteristiques",
+    "icon": "hashtag"
+  },
+  "options": {},
+  "attributes": {
+    "Allee": {
+      "type": "string"
+    },
+    "Amenagement_du_terrain": {
+      "type": "string"
+    },
+    "Approvisionnement_en_eau": {
+      "type": "string"
+    },
+    "Fenetres": {
+      "type": "string"
+    },
+    "Fondation": {
+      "type": "string"
+    },
+    "Foyers_poeles": {
+      "type": "string"
+    },
+    "Proximite": {
+      "displayName": "Proximite",
+      "type": "component",
+      "repeatable": true,
+      "component": "proximite.proximite"
+    },
+    "Stationnement": {
+      "type": "integer"
+    },
+    "Systeme_egouts": {
+      "type": "string"
+    },
+    "Toiture": {
+      "type": "string"
+    },
+    "Topographie": {
+      "type": "string"
+    },
+    "Type_de_fenetre": {
+      "type": "string"
+    },
+    "Energie_chauffage": {
+      "type": "string"
+    }
+  }
+}

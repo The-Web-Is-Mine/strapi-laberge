@@ -2101,6 +2101,14 @@
     url-join "4.0.1"
     yup "0.32.9"
 
+"@strapi/provider-email-nodemailer@^5.12.7":
+  version "5.12.7"
+  resolved "https://registry.yarnpkg.com/@strapi/provider-email-nodemailer/-/provider-email-nodemailer-5.12.7.tgz#4a95272d8d0a1470e151be749afcd02278160e80"
+  integrity sha512-7nciE0ryMWKLpOetPLTyjFMJsS73Qbvs42JkFdZ1FFwpmkQgxzbzGGGikS671N+yVwicT/8RGZ/EJcGQza20bA==
+  dependencies:
+    lodash "4.17.21"
+    nodemailer "6.9.1"
+
 "@strapi/provider-email-sendmail@5.11.0":
   version "5.11.0"
   resolved "https://registry.yarnpkg.com/@strapi/provider-email-sendmail/-/provider-email-sendmail-5.11.0.tgz#c35584ad86b140b408dcbed232cf0964217b562e"
@@ -7234,6 +7242,11 @@ nodemailer-shared@1.1.0:
   dependencies:
     nodemailer-fetch "1.6.0"
 
+nodemailer@6.9.1:
+  version "6.9.1"
+  resolved "https://registry.yarnpkg.com/nodemailer/-/nodemailer-6.9.1.tgz#8249d928a43ed85fec17b13d2870c8f758a126ed"
+  integrity sha512-qHw7dOiU5UKNnQpXktdgQ1d3OFgRAekuvbJLcdG5dnEo/GtcTHRYM7+UfJARdOFU9WUQO8OiIamgWPmiSFHYAA==
+
 nodemon@3.0.2:
   version "3.0.2"
   resolved "https://registry.yarnpkg.com/nodemon/-/nodemon-3.0.2.tgz#222dd0de79fc7b7b3eedba422d2b9e5fc678621e"
@@ -9111,6 +9124,11 @@ stdin-discarder@^0.2.2:
   version "0.2.2"
   resolved "https://registry.yarnpkg.com/stdin-discarder/-/stdin-discarder-0.2.2.tgz#390037f44c4ae1a1ae535c5fe38dc3aba8d997be"
   integrity sha512-UhDfHmA92YAlNnCfhmq0VeNL5bDbiZGg7sZ2IvPsXubGkiNa9EC+tUTsjBRsYUAz87btI6/1wf4XoVvQ3uRnmQ==
+
+strapi-v5-plugin-populate-deep@^4.0.5:
+  version "4.0.5"
+  resolved "https://registry.yarnpkg.com/strapi-v5-plugin-populate-deep/-/strapi-v5-plugin-populate-deep-4.0.5.tgz#3c909a9dfdcbc81fe4d7a747b1f8e5e5279b3c54"
+  integrity sha512-se5WE8rWxVx+BX904tESoZsRJYJg7VtGWZNeNGhirJGhuUJV5UgAP38Jiq5kPdyT3rASiwfCJxvXgMAfTh3Y5A==
 
 stream-chain@2.2.5, stream-chain@^2.2.5:
   version "2.2.5"

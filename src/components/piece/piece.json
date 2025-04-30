@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_piece_pieces",
+  "info": {
+    "displayName": "Piece",
+    "icon": "hashtag"
+  },
+  "options": {},
+  "attributes": {
+    "Nom": {
+      "type": "string"
+    },
+    "Dimensions": {
+      "type": "string"
+    },
+    "Revetement_de_sol": {
+      "type": "string"
+    },
+    "Informations_supplementaires": {
+      "type": "string"
+    }
+  }
+}

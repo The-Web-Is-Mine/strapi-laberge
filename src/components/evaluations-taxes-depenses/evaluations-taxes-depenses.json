@@ -1,0 +1,31 @@
+{
+  "collectionName": "components_evaluations_taxes_depenses_evaluations_taxes_depenses",
+  "info": {
+    "displayName": "Evaluations_Taxes_Depenses",
+    "icon": "hashtag"
+  },
+  "options": {},
+  "attributes": {
+    "Annee": {
+      "type": "biginteger"
+    },
+    "Evaluation_de_la_batisse": {
+      "type": "decimal"
+    },
+    "Evaluation_du_terrain": {
+      "type": "decimal"
+    },
+    "Total_evaluation": {
+      "type": "decimal"
+    },
+    "Taxes_municipales": {
+      "type": "decimal"
+    },
+    "Taxes_scolaires": {
+      "type": "decimal"
+    },
+    "Total_taxes": {
+      "type": "decimal"
+    }
+  }
+}

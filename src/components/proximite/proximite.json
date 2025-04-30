@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_proximite_proximites",
+  "info": {
+    "displayName": "Proximite",
+    "icon": "hashtag"
+  },
+  "options": {},
+  "attributes": {
+    "Nom": {
+      "type": "string"
+    }
+  }
+}

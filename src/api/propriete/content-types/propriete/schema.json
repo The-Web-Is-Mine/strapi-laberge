@@ -1,0 +1,121 @@
+{
+  "kind": "collectionType",
+  "collectionName": "proprietes",
+  "info": {
+    "singularName": "propriete",
+    "pluralName": "proprietes",
+    "displayName": "Propriété"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "Titre": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "required": true
+    },
+    "Adresse": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "required": true
+    },
+    "Prix": {
+      "type": "decimal",
+      "required": true,
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      }
+    },
+    "Numero_Centris": {
+      "type": "biginteger",
+      "required": true,
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      }
+    },
+    "Image_Presentation": {
+      "allowedTypes": [
+        "images",
+        "files"
+      ],
+      "type": "media",
+      "multiple": false,
+      "required": true
+    },
+    "Images": {
+      "allowedTypes": [
+        "files",
+        "images"
+      ],
+      "type": "media",
+      "multiple": true,
+      "required": true
+    },
+    "Description": {
+      "type": "text",
+      "required": true,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "Garantie": {
+      "type": "boolean",
+      "default": false,
+      "required": true
+    },
+    "Fiche_descriptive": {
+      "displayName": "Fiche_descriptive",
+      "type": "component",
+      "repeatable": false,
+      "component": "fiche-descriptive.fiche-descriptive",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "Pieces_et_particularites_exterieures": {
+      "displayName": "Pieces_et_particularites_exterieures",
+      "type": "component",
+      "repeatable": false,
+      "component": "pieces-et-particularites-exterieures.pieces-et-particularites-exterieures",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "Caracteristiques": {
+      "displayName": "Caracteristiques",
+      "type": "component",
+      "repeatable": false,
+      "component": "caracteristiques.caracteristiques"
+    },
+    "Evaluations_Taxes_Depenses": {
+      "displayName": "Evaluations_Taxes_Depenses",
+      "type": "component",
+      "repeatable": false,
+      "component": "evaluations-taxes-depenses.evaluations-taxes-depenses"
+    }
+  }
+}

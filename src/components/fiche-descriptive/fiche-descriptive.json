@@ -1,0 +1,46 @@
+{
+  "collectionName": "components_fiche_descriptive_fiche_descriptives",
+  "info": {
+    "displayName": "Fiche_descriptive",
+    "icon": "hashtag"
+  },
+  "options": {},
+  "attributes": {
+    "Nombre_piece": {
+      "type": "integer"
+    },
+    "Nombre_Salle_de_Bain": {
+      "type": "integer"
+    },
+    "Nombre_Salle_Eau": {
+      "type": "integer"
+    },
+    "Nombre_Chambre": {
+      "type": "integer"
+    },
+    "Type_de_batiment": {
+      "type": "string"
+    },
+    "Genre_de_propriete": {
+      "type": "string"
+    },
+    "Annee_de_construction": {
+      "type": "biginteger"
+    },
+    "Dimensions_du_batiment": {
+      "type": "decimal"
+    },
+    "Superficie_habitable": {
+      "type": "decimal"
+    },
+    "Dimensions_du_terrain": {
+      "type": "decimal"
+    },
+    "Superficie_du_terrain": {
+      "type": "decimal"
+    },
+    "Cadastre_du_Quebec": {
+      "type": "biginteger"
+    }
+  }
+}

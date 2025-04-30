@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_pieces_et_particularites_exterieures_pieces_et_particularites_exterieures",
+  "info": {
+    "displayName": "Pieces_et_particularites_exterieures",
+    "icon": "hashtag"
+  },
+  "options": {},
+  "attributes": {
+    "NIveau": {
+      "displayName": "NIveau",
+      "type": "component",
+      "repeatable": true,
+      "component": "n-iveau.n-iveau",
+      "required": false
+    }
+  }
+}
