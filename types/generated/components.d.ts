@@ -68,7 +68,8 @@ export interface FicheDescriptiveFicheDescriptive
 export interface NIveauNIveau extends Struct.ComponentSchema {
   collectionName: 'components_n_iveau_n_iveaus';
   info: {
-    displayName: 'NIveau';
+    description: '';
+    displayName: 'niveau';
     icon: 'hashtag';
   };
   attributes: {

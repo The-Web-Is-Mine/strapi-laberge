@@ -1,8 +1,9 @@
 {
   "collectionName": "components_n_iveau_n_iveaus",
   "info": {
-    "displayName": "NIveau",
-    "icon": "hashtag"
+    "displayName": "niveau",
+    "icon": "hashtag",
+    "description": ""
   },
   "options": {},
   "attributes": {
