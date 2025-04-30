@@ -398,6 +398,7 @@ export interface ApiCourtierCourtier extends Struct.CollectionTypeSchema {
         };
       }>;
     Email: Schema.Attribute.String & Schema.Attribute.Required;
+    Image: Schema.Attribute.Media<'images'> & Schema.Attribute.Required;
     locale: Schema.Attribute.String;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
