@@ -574,10 +574,50 @@ export interface ApiProprietePropriete extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiSousTypesDeProprieteSousTypesDePropriete
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'sous_types_de_proprietes';
+  info: {
+    displayName: 'Sous Types de propriete';
+    pluralName: 'sous-types-de-proprietes';
+    singularName: 'sous-types-de-propriete';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::sous-types-de-propriete.sous-types-de-propriete'
+    >;
+    Nom: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiTypeDeProprieteTypeDePropriete
   extends Struct.CollectionTypeSchema {
   collectionName: 'type_de_proprietes';
   info: {
+    description: '';
     displayName: 'Type de propri\u00E9t\u00E9';
     pluralName: 'type-de-proprietes';
     singularName: 'type-de-propriete';
@@ -607,15 +647,10 @@ export interface ApiTypeDeProprieteTypeDePropriete
         };
       }>;
     publishedAt: Schema.Attribute.DateTime;
-    Type_de_propriete: Schema.Attribute.Component<
-      'type-de-propriete.type-de-propriete',
-      true
-    > &
-      Schema.Attribute.SetPluginOptions<{
-        i18n: {
-          localized: true;
-        };
-      }>;
+    sous_types_de_proprietes: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::sous-types-de-propriete.sous-types-de-propriete'
+    >;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -1159,6 +1194,7 @@ declare module '@strapi/strapi' {
       'api::courtier.courtier': ApiCourtierCourtier;
       'api::force-administrative.force-administrative': ApiForceAdministrativeForceAdministrative;
       'api::propriete.propriete': ApiProprietePropriete;
+      'api::sous-types-de-propriete.sous-types-de-propriete': ApiSousTypesDeProprieteSousTypesDePropriete;
       'api::type-de-propriete.type-de-propriete': ApiTypeDeProprieteTypeDePropriete;
       'api::ville.ville': ApiVilleVille;
       'plugin::content-releases.release': PluginContentReleasesRelease;

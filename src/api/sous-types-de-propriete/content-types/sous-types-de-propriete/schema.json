@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "sous_types_de_proprietes",
+  "info": {
+    "singularName": "sous-types-de-propriete",
+    "pluralName": "sous-types-de-proprietes",
+    "displayName": "Sous Types de propriete"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "Nom": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "required": true
+    }
+  }
+}
