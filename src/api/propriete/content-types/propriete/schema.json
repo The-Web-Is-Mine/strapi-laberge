@@ -34,15 +34,6 @@
       },
       "required": true
     },
-    "Prix": {
-      "type": "decimal",
-      "required": true,
-      "pluginOptions": {
-        "i18n": {
-          "localized": false
-        }
-      }
-    },
     "Numero_Centris": {
       "type": "biginteger",
       "required": true,
@@ -167,6 +158,19 @@
       "type": "relation",
       "relation": "oneToOne",
       "target": "api::courtier.courtier"
+    },
+    "Vendu": {
+      "type": "boolean",
+      "default": false
+    },
+    "Prix": {
+      "type": "string",
+      "required": true,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     }
   }
 }

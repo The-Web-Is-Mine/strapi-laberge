@@ -569,11 +569,11 @@ export interface ApiProprietePropriete extends Struct.CollectionTypeSchema {
           localized: true;
         };
       }>;
-    Prix: Schema.Attribute.Decimal &
+    Prix: Schema.Attribute.String &
       Schema.Attribute.Required &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
-          localized: false;
+          localized: true;
         };
       }>;
     publishedAt: Schema.Attribute.DateTime;
@@ -591,6 +591,7 @@ export interface ApiProprietePropriete extends Struct.CollectionTypeSchema {
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    Vendu: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
   };
 }
 
