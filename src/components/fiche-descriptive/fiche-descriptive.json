@@ -28,12 +28,6 @@
     "Annee_de_construction": {
       "type": "biginteger"
     },
-    "Dimensions_du_batiment": {
-      "type": "decimal"
-    },
-    "Superficie_habitable": {
-      "type": "decimal"
-    },
     "Cadastre_du_Quebec": {
       "type": "biginteger"
     },
@@ -41,6 +35,12 @@
       "type": "string"
     },
     "Superficie_du_terrain": {
+      "type": "string"
+    },
+    "Dimensions_du_batiment": {
+      "type": "string"
+    },
+    "Superficie_habitable": {
       "type": "string"
     }
   }

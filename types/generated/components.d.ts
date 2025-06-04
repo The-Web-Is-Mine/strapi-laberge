@@ -90,14 +90,14 @@ export interface FicheDescriptiveFicheDescriptive
     Annee_de_construction: Schema.Attribute.BigInteger;
     Cadastre_du_Quebec: Schema.Attribute.BigInteger;
     Dimension_du_terrain: Schema.Attribute.String;
-    Dimensions_du_batiment: Schema.Attribute.Decimal;
+    Dimensions_du_batiment: Schema.Attribute.String;
     Genre_de_propriete: Schema.Attribute.String;
     Nombre_Chambre: Schema.Attribute.Integer;
     Nombre_piece: Schema.Attribute.Integer;
     Nombre_Salle_de_Bain: Schema.Attribute.Integer;
     Nombre_Salle_Eau: Schema.Attribute.Integer;
     Superficie_du_terrain: Schema.Attribute.String;
-    Superficie_habitable: Schema.Attribute.Decimal;
+    Superficie_habitable: Schema.Attribute.String;
     Type_de_batiment: Schema.Attribute.String;
   };
 }
