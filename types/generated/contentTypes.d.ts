@@ -505,6 +505,9 @@ export interface ApiProprietePropriete extends Struct.CollectionTypeSchema {
       'caracteristiques.caracteristiques',
       false
     >;
+    Categorie: Schema.Attribute.Enumeration<
+      ['\u00C0 vendre', '\u00C0 louer', 'Commerciales']
+    >;
     courtier: Schema.Attribute.Relation<'oneToOne', 'api::courtier.courtier'>;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
@@ -578,6 +581,10 @@ export interface ApiProprietePropriete extends Struct.CollectionTypeSchema {
       }>;
     publishedAt: Schema.Attribute.DateTime;
     Region: Schema.Attribute.String & Schema.Attribute.Required;
+    sous_types_de_propriete: Schema.Attribute.Relation<
+      'oneToOne',
+      'api::sous-types-de-propriete.sous-types-de-propriete'
+    >;
     Titre: Schema.Attribute.String &
       Schema.Attribute.Required &
       Schema.Attribute.SetPluginOptions<{
@@ -585,9 +592,6 @@ export interface ApiProprietePropriete extends Struct.CollectionTypeSchema {
           localized: true;
         };
       }>;
-    Type: Schema.Attribute.Enumeration<
-      ['\u00C0 vendre', '\u00C0 louer', 'Commerciales']
-    >;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;

@@ -109,7 +109,7 @@
       "repeatable": false,
       "component": "evaluations-taxes-depenses.evaluations-taxes-depenses"
     },
-    "Type": {
+    "Categorie": {
       "type": "enumeration",
       "enum": [
         "À vendre",
@@ -171,6 +171,11 @@
           "localized": true
         }
       }
+    },
+    "sous_types_de_propriete": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::sous-types-de-propriete.sous-types-de-propriete"
     }
   }
 }
