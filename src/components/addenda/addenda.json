@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_addenda_addenda",
+  "info": {
+    "displayName": "Addenda",
+    "icon": "typhoon"
+  },
+  "options": {},
+  "attributes": {
+    "Description": {
+      "type": "text"
+    }
+  }
+}

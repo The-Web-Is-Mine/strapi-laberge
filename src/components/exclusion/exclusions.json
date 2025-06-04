@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_exclusion_exclusions",
+  "info": {
+    "displayName": "Exclusions",
+    "icon": "cog"
+  },
+  "options": {},
+  "attributes": {
+    "Item": {
+      "type": "string"
+    }
+  }
+}

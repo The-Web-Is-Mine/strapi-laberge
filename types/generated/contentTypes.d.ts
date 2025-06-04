@@ -488,6 +488,12 @@ export interface ApiProprietePropriete extends Struct.CollectionTypeSchema {
     };
   };
   attributes: {
+    Addenda: Schema.Attribute.Component<'addenda.addenda', false> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     Adresse: Schema.Attribute.String &
       Schema.Attribute.Required &
       Schema.Attribute.SetPluginOptions<{
@@ -499,6 +505,7 @@ export interface ApiProprietePropriete extends Struct.CollectionTypeSchema {
       'caracteristiques.caracteristiques',
       false
     >;
+    courtier: Schema.Attribute.Relation<'oneToOne', 'api::courtier.courtier'>;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -513,6 +520,12 @@ export interface ApiProprietePropriete extends Struct.CollectionTypeSchema {
       'evaluations-taxes-depenses.evaluations-taxes-depenses',
       false
     >;
+    Exclusions: Schema.Attribute.Component<'exclusion.exclusions', true> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     Fiche_descriptive: Schema.Attribute.Component<
       'fiche-descriptive.fiche-descriptive',
       false
@@ -529,6 +542,12 @@ export interface ApiProprietePropriete extends Struct.CollectionTypeSchema {
       Schema.Attribute.Required;
     Images: Schema.Attribute.Media<'files' | 'images', true> &
       Schema.Attribute.Required;
+    Inclusions: Schema.Attribute.Component<'inclusion.inclusions', true> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     locale: Schema.Attribute.String;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
@@ -558,6 +577,7 @@ export interface ApiProprietePropriete extends Struct.CollectionTypeSchema {
         };
       }>;
     publishedAt: Schema.Attribute.DateTime;
+    Region: Schema.Attribute.String & Schema.Attribute.Required;
     Titre: Schema.Attribute.String &
       Schema.Attribute.Required &
       Schema.Attribute.SetPluginOptions<{

@@ -1,9 +1,21 @@
 import type { Schema, Struct } from '@strapi/strapi';
 
+export interface AddendaAddenda extends Struct.ComponentSchema {
+  collectionName: 'components_addenda_addenda';
+  info: {
+    displayName: 'Addenda';
+    icon: 'typhoon';
+  };
+  attributes: {
+    Description: Schema.Attribute.Text;
+  };
+}
+
 export interface CaracteristiquesCaracteristiques
   extends Struct.ComponentSchema {
   collectionName: 'components_caracteristiques_caracteristiques';
   info: {
+    description: '';
     displayName: 'Caracteristiques';
     icon: 'hashtag';
   };
@@ -17,6 +29,10 @@ export interface CaracteristiquesCaracteristiques
     Foyers_poeles: Schema.Attribute.String;
     Proximite: Schema.Attribute.Component<'proximite.proximite', true>;
     Stationnement: Schema.Attribute.Integer;
+    Stationnements: Schema.Attribute.Component<
+      'stationnement.stationnement',
+      true
+    >;
     Systeme_egouts: Schema.Attribute.String;
     Toiture: Schema.Attribute.String;
     Topographie: Schema.Attribute.String;
@@ -42,6 +58,17 @@ export interface EvaluationsTaxesDepensesEvaluationsTaxesDepenses
   };
 }
 
+export interface ExclusionExclusions extends Struct.ComponentSchema {
+  collectionName: 'components_exclusion_exclusions';
+  info: {
+    displayName: 'Exclusions';
+    icon: 'cog';
+  };
+  attributes: {
+    Item: Schema.Attribute.String;
+  };
+}
+
 export interface FicheDescriptiveFicheDescriptive
   extends Struct.ComponentSchema {
   collectionName: 'components_fiche_descriptive_fiche_descriptives';
@@ -63,6 +90,17 @@ export interface FicheDescriptiveFicheDescriptive
     Superficie_du_terrain: Schema.Attribute.String;
     Superficie_habitable: Schema.Attribute.Decimal;
     Type_de_batiment: Schema.Attribute.String;
+  };
+}
+
+export interface InclusionInclusions extends Struct.ComponentSchema {
+  collectionName: 'components_inclusion_inclusions';
+  info: {
+    displayName: 'Inclusions';
+    icon: 'cog';
+  };
+  attributes: {
+    Item: Schema.Attribute.String;
   };
 }
 
@@ -116,6 +154,18 @@ export interface ProximiteProximite extends Struct.ComponentSchema {
   };
 }
 
+export interface StationnementStationnement extends Struct.ComponentSchema {
+  collectionName: 'components_stationnement_stationnements';
+  info: {
+    displayName: 'Stationnement';
+    icon: 'cog';
+  };
+  attributes: {
+    Place: Schema.Attribute.Integer;
+    Type: Schema.Attribute.String;
+  };
+}
+
 export interface TypeDeProprieteTypeDePropriete extends Struct.ComponentSchema {
   collectionName: 'components_type_de_propriete_type_de_propriete';
   info: {
@@ -130,13 +180,17 @@ export interface TypeDeProprieteTypeDePropriete extends Struct.ComponentSchema {
 declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
+      'addenda.addenda': AddendaAddenda;
       'caracteristiques.caracteristiques': CaracteristiquesCaracteristiques;
       'evaluations-taxes-depenses.evaluations-taxes-depenses': EvaluationsTaxesDepensesEvaluationsTaxesDepenses;
+      'exclusion.exclusions': ExclusionExclusions;
       'fiche-descriptive.fiche-descriptive': FicheDescriptiveFicheDescriptive;
+      'inclusion.inclusions': InclusionInclusions;
       'n-iveau.n-iveau': NIveauNIveau;
       'piece.piece': PiecePiece;
       'pieces-et-particularites-exterieures.pieces-et-particularites-exterieures': PiecesEtParticularitesExterieuresPiecesEtParticularitesExterieures;
       'proximite.proximite': ProximiteProximite;
+      'stationnement.stationnement': StationnementStationnement;
       'type-de-propriete.type-de-propriete': TypeDeProprieteTypeDePropriete;
     }
   }

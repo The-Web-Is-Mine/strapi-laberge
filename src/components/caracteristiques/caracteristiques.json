@@ -2,7 +2,8 @@
   "collectionName": "components_caracteristiques_caracteristiques",
   "info": {
     "displayName": "Caracteristiques",
-    "icon": "hashtag"
+    "icon": "hashtag",
+    "description": ""
   },
   "options": {},
   "attributes": {
@@ -47,6 +48,12 @@
     },
     "Energie_chauffage": {
       "type": "string"
+    },
+    "Stationnements": {
+      "displayName": "Stationnement",
+      "type": "component",
+      "repeatable": true,
+      "component": "stationnement.stationnement"
     }
   }
 }

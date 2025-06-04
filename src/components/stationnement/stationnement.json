@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_stationnement_stationnements",
+  "info": {
+    "displayName": "Stationnement",
+    "icon": "cog"
+  },
+  "options": {},
+  "attributes": {
+    "Type": {
+      "type": "string"
+    },
+    "Place": {
+      "type": "integer"
+    }
+  }
+}

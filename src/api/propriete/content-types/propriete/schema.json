@@ -125,6 +125,48 @@
         "À louer",
         "Commerciales"
       ]
+    },
+    "Region": {
+      "type": "string",
+      "required": true
+    },
+    "Addenda": {
+      "displayName": "Addenda",
+      "type": "component",
+      "repeatable": false,
+      "component": "addenda.addenda",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "Inclusions": {
+      "displayName": "Inclusions",
+      "type": "component",
+      "repeatable": true,
+      "component": "inclusion.inclusions",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "Exclusions": {
+      "displayName": "Exclusions",
+      "type": "component",
+      "repeatable": true,
+      "component": "exclusion.exclusions",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "courtier": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::courtier.courtier"
     }
   }
 }

@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_inclusion_inclusions",
+  "info": {
+    "displayName": "Inclusions",
+    "icon": "cog"
+  },
+  "options": {},
+  "attributes": {
+    "Item": {
+      "type": "string"
+    }
+  }
+}
