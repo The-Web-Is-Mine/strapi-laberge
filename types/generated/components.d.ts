@@ -23,10 +23,13 @@ export interface CaracteristiquesCaracteristiques
     Allee: Schema.Attribute.String;
     Amenagement_du_terrain: Schema.Attribute.String;
     Approvisionnement_en_eau: Schema.Attribute.String;
+    Armoir: Schema.Attribute.String;
     Energie_chauffage: Schema.Attribute.String;
+    Equipement_disponible: Schema.Attribute.Text;
     Fenetres: Schema.Attribute.String;
     Fondation: Schema.Attribute.String;
     Foyers_poeles: Schema.Attribute.String;
+    Mode_de_chauffage: Schema.Attribute.Text;
     Proximite: Schema.Attribute.Component<'proximite.proximite', true>;
     Stationnement: Schema.Attribute.Integer;
     Stationnements: Schema.Attribute.Component<
@@ -44,13 +47,19 @@ export interface EvaluationsTaxesDepensesEvaluationsTaxesDepenses
   extends Struct.ComponentSchema {
   collectionName: 'components_evaluations_taxes_depenses_evaluations_taxes_depenses';
   info: {
+    description: '';
     displayName: 'Evaluations_Taxes_Depenses';
     icon: 'hashtag';
   };
   attributes: {
     Annee: Schema.Attribute.BigInteger;
+    Assurances: Schema.Attribute.Decimal;
+    Cout_energie: Schema.Attribute.Decimal;
+    deneigement_pelouse: Schema.Attribute.Decimal;
+    entretien_reparation: Schema.Attribute.Decimal;
     Evaluation_de_la_batisse: Schema.Attribute.Decimal;
     Evaluation_du_terrain: Schema.Attribute.Decimal;
+    frais_admin: Schema.Attribute.Decimal;
     Taxes_municipales: Schema.Attribute.Decimal;
     Taxes_scolaires: Schema.Attribute.Decimal;
     Total_evaluation: Schema.Attribute.Decimal;
@@ -154,6 +163,17 @@ export interface ProximiteProximite extends Struct.ComponentSchema {
   };
 }
 
+export interface RevenueRevenue extends Struct.ComponentSchema {
+  collectionName: 'components_revenue_revenues';
+  info: {
+    displayName: 'Revenue';
+  };
+  attributes: {
+    Nom: Schema.Attribute.String;
+    Revenue: Schema.Attribute.String;
+  };
+}
+
 export interface StationnementStationnement extends Struct.ComponentSchema {
   collectionName: 'components_stationnement_stationnements';
   info: {
@@ -190,6 +210,7 @@ declare module '@strapi/strapi' {
       'piece.piece': PiecePiece;
       'pieces-et-particularites-exterieures.pieces-et-particularites-exterieures': PiecesEtParticularitesExterieuresPiecesEtParticularitesExterieures;
       'proximite.proximite': ProximiteProximite;
+      'revenue.revenue': RevenueRevenue;
       'stationnement.stationnement': StationnementStationnement;
       'type-de-propriete.type-de-propriete': TypeDeProprieteTypeDePropriete;
     }

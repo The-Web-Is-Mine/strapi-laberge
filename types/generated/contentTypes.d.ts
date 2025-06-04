@@ -581,6 +581,15 @@ export interface ApiProprietePropriete extends Struct.CollectionTypeSchema {
       }>;
     publishedAt: Schema.Attribute.DateTime;
     Region: Schema.Attribute.String & Schema.Attribute.Required;
+    Revenue_Brut_Potentiel: Schema.Attribute.Component<
+      'revenue.revenue',
+      true
+    > &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     sous_types_de_propriete: Schema.Attribute.Relation<
       'oneToOne',
       'api::sous-types-de-propriete.sous-types-de-propriete'

@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_revenue_revenues",
+  "info": {
+    "displayName": "Revenue"
+  },
+  "options": {},
+  "attributes": {
+    "Nom": {
+      "type": "string"
+    },
+    "Revenue": {
+      "type": "string"
+    }
+  }
+}

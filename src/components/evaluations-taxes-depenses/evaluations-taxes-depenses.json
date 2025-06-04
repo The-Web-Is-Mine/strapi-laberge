@@ -2,7 +2,8 @@
   "collectionName": "components_evaluations_taxes_depenses_evaluations_taxes_depenses",
   "info": {
     "displayName": "Evaluations_Taxes_Depenses",
-    "icon": "hashtag"
+    "icon": "hashtag",
+    "description": ""
   },
   "options": {},
   "attributes": {
@@ -25,6 +26,21 @@
       "type": "decimal"
     },
     "Total_taxes": {
+      "type": "decimal"
+    },
+    "Assurances": {
+      "type": "decimal"
+    },
+    "Cout_energie": {
+      "type": "decimal"
+    },
+    "deneigement_pelouse": {
+      "type": "decimal"
+    },
+    "entretien_reparation": {
+      "type": "decimal"
+    },
+    "frais_admin": {
       "type": "decimal"
     }
   }

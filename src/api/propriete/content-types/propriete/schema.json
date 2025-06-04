@@ -176,6 +176,17 @@
       "type": "relation",
       "relation": "oneToOne",
       "target": "api::sous-types-de-propriete.sous-types-de-propriete"
+    },
+    "Revenue_Brut_Potentiel": {
+      "displayName": "Revenue",
+      "type": "component",
+      "repeatable": true,
+      "component": "revenue.revenue",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     }
   }
 }

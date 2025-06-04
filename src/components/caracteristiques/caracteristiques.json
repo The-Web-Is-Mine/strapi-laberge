@@ -54,6 +54,15 @@
       "type": "component",
       "repeatable": true,
       "component": "stationnement.stationnement"
+    },
+    "Armoir": {
+      "type": "string"
+    },
+    "Equipement_disponible": {
+      "type": "text"
+    },
+    "Mode_de_chauffage": {
+      "type": "text"
     }
   }
 }
