@@ -87,7 +87,7 @@ export interface FicheDescriptiveFicheDescriptive
     icon: 'hashtag';
   };
   attributes: {
-    Annee_de_construction: Schema.Attribute.BigInteger;
+    Annee_de_construction: Schema.Attribute.String;
     Cadastre_du_Quebec: Schema.Attribute.BigInteger;
     Dimension_du_terrain: Schema.Attribute.String;
     Dimensions_du_batiment: Schema.Attribute.String;

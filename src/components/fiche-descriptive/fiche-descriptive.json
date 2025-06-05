@@ -25,9 +25,6 @@
     "Genre_de_propriete": {
       "type": "string"
     },
-    "Annee_de_construction": {
-      "type": "biginteger"
-    },
     "Cadastre_du_Quebec": {
       "type": "biginteger"
     },
@@ -41,6 +38,9 @@
       "type": "string"
     },
     "Superficie_habitable": {
+      "type": "string"
+    },
+    "Annee_de_construction": {
       "type": "string"
     }
   }
