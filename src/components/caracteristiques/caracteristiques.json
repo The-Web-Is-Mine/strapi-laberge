@@ -8,22 +8,22 @@
   "options": {},
   "attributes": {
     "Allee": {
-      "type": "string"
+      "type": "text"
     },
     "Amenagement_du_terrain": {
-      "type": "string"
+      "type": "text"
     },
     "Approvisionnement_en_eau": {
-      "type": "string"
+      "type": "text"
     },
     "Fenetres": {
-      "type": "string"
+      "type": "text"
     },
     "Fondation": {
-      "type": "string"
+      "type": "text"
     },
     "Foyers_poeles": {
-      "type": "string"
+      "type": "text"
     },
     "Proximite": {
       "displayName": "Proximite",
@@ -31,23 +31,20 @@
       "repeatable": true,
       "component": "proximite.proximite"
     },
-    "Stationnement": {
-      "type": "integer"
-    },
     "Systeme_egouts": {
-      "type": "string"
+      "type": "text"
     },
     "Toiture": {
-      "type": "string"
+      "type": "text"
     },
     "Topographie": {
-      "type": "string"
+      "type": "text"
     },
     "Type_de_fenetre": {
-      "type": "string"
+      "type": "text"
     },
     "Energie_chauffage": {
-      "type": "string"
+      "type": "text"
     },
     "Stationnements": {
       "displayName": "Stationnement",
@@ -56,12 +53,27 @@
       "component": "stationnement.stationnement"
     },
     "Armoir": {
-      "type": "string"
+      "type": "text"
     },
     "Equipement_disponible": {
       "type": "text"
     },
     "Mode_de_chauffage": {
+      "type": "text"
+    },
+    "Garange": {
+      "type": "text"
+    },
+    "Revetement": {
+      "type": "text"
+    },
+    "Salle_de_bains_salle_eau": {
+      "type": "text"
+    },
+    "Sous_sol": {
+      "type": "text"
+    },
+    "Zonage": {
       "type": "text"
     }
   }

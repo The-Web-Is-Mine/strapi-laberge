@@ -20,26 +20,30 @@ export interface CaracteristiquesCaracteristiques
     icon: 'hashtag';
   };
   attributes: {
-    Allee: Schema.Attribute.String;
-    Amenagement_du_terrain: Schema.Attribute.String;
-    Approvisionnement_en_eau: Schema.Attribute.String;
-    Armoir: Schema.Attribute.String;
-    Energie_chauffage: Schema.Attribute.String;
+    Allee: Schema.Attribute.Text;
+    Amenagement_du_terrain: Schema.Attribute.Text;
+    Approvisionnement_en_eau: Schema.Attribute.Text;
+    Armoir: Schema.Attribute.Text;
+    Energie_chauffage: Schema.Attribute.Text;
     Equipement_disponible: Schema.Attribute.Text;
-    Fenetres: Schema.Attribute.String;
-    Fondation: Schema.Attribute.String;
-    Foyers_poeles: Schema.Attribute.String;
+    Fenetres: Schema.Attribute.Text;
+    Fondation: Schema.Attribute.Text;
+    Foyers_poeles: Schema.Attribute.Text;
+    Garange: Schema.Attribute.Text;
     Mode_de_chauffage: Schema.Attribute.Text;
     Proximite: Schema.Attribute.Component<'proximite.proximite', true>;
-    Stationnement: Schema.Attribute.Integer;
+    Revetement: Schema.Attribute.Text;
+    Salle_de_bains_salle_eau: Schema.Attribute.Text;
+    Sous_sol: Schema.Attribute.Text;
     Stationnements: Schema.Attribute.Component<
       'stationnement.stationnement',
       true
     >;
-    Systeme_egouts: Schema.Attribute.String;
-    Toiture: Schema.Attribute.String;
-    Topographie: Schema.Attribute.String;
-    Type_de_fenetre: Schema.Attribute.String;
+    Systeme_egouts: Schema.Attribute.Text;
+    Toiture: Schema.Attribute.Text;
+    Topographie: Schema.Attribute.Text;
+    Type_de_fenetre: Schema.Attribute.Text;
+    Zonage: Schema.Attribute.Text;
   };
 }
 

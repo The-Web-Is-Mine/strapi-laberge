@@ -523,7 +523,7 @@ export interface ApiProprietePropriete extends Struct.CollectionTypeSchema {
       'evaluations-taxes-depenses.evaluations-taxes-depenses',
       false
     >;
-    Exclusions: Schema.Attribute.Component<'exclusion.exclusions', true> &
+    Exclusions: Schema.Attribute.Text &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
@@ -545,7 +545,7 @@ export interface ApiProprietePropriete extends Struct.CollectionTypeSchema {
       Schema.Attribute.Required;
     Images: Schema.Attribute.Media<'files' | 'images', true> &
       Schema.Attribute.Required;
-    Inclusions: Schema.Attribute.Component<'inclusion.inclusions', true> &
+    Inclusions: Schema.Attribute.Text &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: true;

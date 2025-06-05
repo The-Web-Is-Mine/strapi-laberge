@@ -132,28 +132,6 @@
         }
       }
     },
-    "Inclusions": {
-      "displayName": "Inclusions",
-      "type": "component",
-      "repeatable": true,
-      "component": "inclusion.inclusions",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      }
-    },
-    "Exclusions": {
-      "displayName": "Exclusions",
-      "type": "component",
-      "repeatable": true,
-      "component": "exclusion.exclusions",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      }
-    },
     "courtier": {
       "type": "relation",
       "relation": "oneToOne",
@@ -182,6 +160,22 @@
       "type": "component",
       "repeatable": true,
       "component": "revenue.revenue",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "Inclusions": {
+      "type": "text",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "Exclusions": {
+      "type": "text",
       "pluginOptions": {
         "i18n": {
           "localized": true
