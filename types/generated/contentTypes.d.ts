@@ -580,7 +580,6 @@ export interface ApiProprietePropriete extends Struct.CollectionTypeSchema {
         };
       }>;
     publishedAt: Schema.Attribute.DateTime;
-    Region: Schema.Attribute.String & Schema.Attribute.Required;
     Revenue_Brut_Potentiel: Schema.Attribute.Component<
       'revenue.revenue',
       true
@@ -605,6 +604,7 @@ export interface ApiProprietePropriete extends Struct.CollectionTypeSchema {
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
     Vendu: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
+    ville: Schema.Attribute.Relation<'oneToOne', 'api::ville.ville'>;
   };
 }
 

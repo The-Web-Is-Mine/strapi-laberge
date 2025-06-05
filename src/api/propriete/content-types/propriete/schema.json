@@ -117,10 +117,6 @@
         "Commerciales"
       ]
     },
-    "Region": {
-      "type": "string",
-      "required": true
-    },
     "Addenda": {
       "displayName": "Addenda",
       "type": "component",
@@ -181,6 +177,11 @@
           "localized": true
         }
       }
+    },
+    "ville": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::ville.ville"
     }
   }
 }
