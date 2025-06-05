@@ -42,6 +42,9 @@
     },
     "frais_admin": {
       "type": "decimal"
+    },
+    "Taxes_autre": {
+      "type": "decimal"
     }
   }
 }

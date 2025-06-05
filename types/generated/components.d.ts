@@ -64,6 +64,7 @@ export interface EvaluationsTaxesDepensesEvaluationsTaxesDepenses
     Evaluation_de_la_batisse: Schema.Attribute.Decimal;
     Evaluation_du_terrain: Schema.Attribute.Decimal;
     frais_admin: Schema.Attribute.Decimal;
+    Taxes_autre: Schema.Attribute.Decimal;
     Taxes_municipales: Schema.Attribute.Decimal;
     Taxes_scolaires: Schema.Attribute.Decimal;
     Total_evaluation: Schema.Attribute.Decimal;
